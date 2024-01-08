@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 import { fetchApi } from '../../API';
 
-const baseURL = "https://anxious-toad-earmuffs.cyclic.app";
+const baseURL = "https://anxious-toad-earmuffs.cyclic.app/api/";
 
 function SignIn() {
 
