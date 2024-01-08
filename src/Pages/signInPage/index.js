@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 import { fetchApi } from '../../API';
 
-const baseURL = "https://anxious-toad-earmuffs.cyclic.app/api/";
+const baseURL = "http://localhost:8888/api/";
 
 function SignIn() {
 
@@ -49,7 +49,7 @@ function SignIn() {
         }catch(err){
             console.log(err)
         }*/
-        Axios.post(`${baseURL}logging/loginUser`, {withCredentials: true}, { userName: formData.userName, passWord: formData.passWord }).then( (response) =>{
+        Axios.post(`${baseURL}logging/loginUser`, { userName: formData.userName, passWord: formData.passWord }, {withCredentials: true}).then( (response) =>{
             console.log(response);
             setPageState( (prev)=>({...prev,isLoading:false}) );
         } );
